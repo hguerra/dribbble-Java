@@ -1,0 +1,129 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "definitions": {},
+  "id": "http://example.com/example.json",
+  "items": {
+    "id": "/items",
+    "properties": {
+      "addedAt": {
+        "default": null,
+        "description": "An explanation about the purpose of this instance.",
+        "id": "/items/properties/addedAt",
+        "title": "The addedat schema",
+        "type": "null"
+      },
+      "buckets_count": {
+        "default": 1,
+        "description": "An explanation about the purpose of this instance.",
+        "id": "/items/properties/buckets_count",
+        "title": "The buckets_count schema",
+        "type": "integer"
+      },
+      "created_at": {
+        "default": "2017-09-26T18:39:26.397Z",
+        "description": "An explanation about the purpose of this instance.",
+        "id": "/items/properties/created_at",
+        "title": "The created_at schema",
+        "type": "string"
+      },
+      "id": {
+        "default": 3831139,
+        "description": "An explanation about the purpose of this instance.",
+        "id": "/items/properties/id",
+        "title": "The id schema",
+        "type": "integer"
+      },
+      "images": {
+        "id": "/items/properties/images",
+        "properties": {
+          "addedAt": {
+            "default": null,
+            "description": "An explanation about the purpose of this instance.",
+            "id": "/items/properties/images/properties/addedAt",
+            "title": "The addedat schema",
+            "type": "null"
+          },
+          "hidpi": {
+            "default": "https://cdn.dribbble.com/users/127552/screenshots/3831139/icons.gif",
+            "description": "An explanation about the purpose of this instance.",
+            "id": "/items/properties/images/properties/hidpi",
+            "title": "The hidpi schema",
+            "type": "string"
+          },
+          "normal": {
+            "default": "https://cdn.dribbble.com/users/127552/screenshots/3831139/icons_1x.gif",
+            "description": "An explanation about the purpose of this instance.",
+            "id": "/items/properties/images/properties/normal",
+            "title": "The normal schema",
+            "type": "string"
+          },
+          "teaser": {
+            "default": "https://cdn.dribbble.com/users/127552/screenshots/3831139/icons_teaser.gif",
+            "description": "An explanation about the purpose of this instance.",
+            "id": "/items/properties/images/properties/teaser",
+            "title": "The teaser schema",
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "likes_count": {
+        "default": 1,
+        "description": "An explanation about the purpose of this instance.",
+        "id": "/items/properties/likes_count",
+        "title": "The likes_count schema",
+        "type": "integer"
+      },
+      "title": {
+        "default": null,
+        "description": "An explanation about the purpose of this instance.",
+        "id": "/items/properties/title",
+        "title": "The title schema",
+        "type": "null"
+      },
+      "user": {
+        "id": "/items/properties/user",
+        "properties": {
+          "addedAt": {
+            "default": null,
+            "description": "An explanation about the purpose of this instance.",
+            "id": "/items/properties/user/properties/addedAt",
+            "title": "The addedat schema",
+            "type": "null"
+          },
+          "id": {
+            "default": 127552,
+            "description": "An explanation about the purpose of this instance.",
+            "id": "/items/properties/user/properties/id",
+            "title": "The id schema",
+            "type": "integer"
+          },
+          "name": {
+            "default": "Heitor Carneiro",
+            "description": "An explanation about the purpose of this instance.",
+            "id": "/items/properties/user/properties/name",
+            "title": "The name schema",
+            "type": "string"
+          },
+          "username": {
+            "default": "hguerra",
+            "description": "An explanation about the purpose of this instance.",
+            "id": "/items/properties/user/properties/username",
+            "title": "The username schema",
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "views_count": {
+        "default": 1,
+        "description": "An explanation about the purpose of this instance.",
+        "id": "/items/properties/views_count",
+        "title": "The views_count schema",
+        "type": "integer"
+      }
+    },
+    "type": "object"
+  },
+  "type": "array"
+}
