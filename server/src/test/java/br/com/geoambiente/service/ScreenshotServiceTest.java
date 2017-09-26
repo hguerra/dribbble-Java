@@ -1,5 +1,6 @@
 package br.com.geoambiente.service;
 
+import br.com.geoambiente.TestData;
 import br.com.geoambiente.domain.impl.Author;
 import br.com.geoambiente.domain.impl.Image;
 import br.com.geoambiente.domain.impl.Screenshot;
@@ -39,28 +40,7 @@ public class ScreenshotServiceTest {
 
     @Before
     public void setUp() throws Exception {
-        Author author = Author.builder()
-                .dribbbleId(127552L)
-                .name("Heitor Carneiro")
-                .username("hguerra")
-                .build();
-
-        Image images = Image.builder()
-                .teaser("https://cdn.dribbble.com/users/127552/screenshots/3831139/icons_teaser.gif")
-                .normal("https://cdn.dribbble.com/users/127552/screenshots/3831139/icons_1x.gif")
-                .hidpi("https://cdn.dribbble.com/users/127552/screenshots/3831139/icons.gif")
-                .build();
-
-        this.screenshot = Screenshot.builder()
-                .dribbbleId(3831139L)
-                .author(author)
-                .images(images)
-                .createdAt(ZonedDateTime.now(ZoneOffset.UTC))
-                .viewsCount(1)
-                .likesCount(1)
-                .bucketsCount(1)
-                .build();
-
+        this.screenshot = TestData.screenshot();
         Screenshot screenshotMock = Screenshot.builder()
                 .dribbbleId(this.screenshot.getDribbbleId())
                 .author(this.screenshot.getAuthor())

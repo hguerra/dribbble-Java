@@ -95,7 +95,6 @@ public class ScreenshotRepositoryTest {
 
     @Test
     public void shouldFindAllScreenshots() {
-        System.out.println(this.screenshots);
         List<Screenshot> saved = this.repository.save(this.screenshots);
         assertNotNull(saved);
         assertThat(saved.size() + 1, equalTo(this.repository.findAll().size()));

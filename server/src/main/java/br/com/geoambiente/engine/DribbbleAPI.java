@@ -9,9 +9,5 @@ import java.util.List;
 
 public interface DribbbleAPI {
     @GET("shots?sort=views")
-    Call<List<Screenshot>> getPopular(
-            @Query("page") Integer page,
-            @Query("per_page") Integer quantityPerPage,
-            @Query("access_token") String accessToken
-    );
+    Call<List<Screenshot>> getScreenshots(@Query("page") Integer page, @Query("per_page") Integer quantity, @Query("access_token") String token);
 }

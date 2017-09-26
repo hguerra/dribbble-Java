@@ -22,13 +22,13 @@ public class ScreenshotServiceImpl implements ScreenshotService {
 
     @Override
     public Screenshot addToFavorites(Screenshot screenshot) {
-        log.info("> Adding a Screenshot to favorites.");
+        log.info("> Adding Screenshot '{}' to favorites.", screenshot.getTitle());
         return this.repository.save(screenshot);
     }
 
     @Override
     public void removeFromFavorites(Screenshot screenshot) {
-        log.info("> Removing a Screenshot from favorites.");
+        log.info("> Removing Screenshot '{}' of author '{}' from favorites.", screenshot.getTitle(), screenshot.getAuthor().getName());
         this.repository.delete(screenshot);
     }
 

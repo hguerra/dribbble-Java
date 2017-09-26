@@ -28,9 +28,9 @@ public class DribbbleServiceImpl implements DribbbleService {
 
 	@Override
 	public List<Screenshot> getScreenshots(Integer page) {
-		log.info("> Retrieving Screenshots");
+		log.info("> Retrieving Screenshots from DribbbleAPI.");
 		List<Screenshot> response;
-		Call<List<Screenshot>> popular = this.dribbbleAPI.getPopular(page, QUANTITY_PER_PAGE, CLIENT_ACCESS_TOKEN);
+		Call<List<Screenshot>> popular = this.dribbbleAPI.getScreenshots(page, QUANTITY_PER_PAGE, CLIENT_ACCESS_TOKEN);
 		try {
 			Response<List<Screenshot>> execute = popular.execute();
 			if (execute.isSuccessful()) {
