@@ -5,11 +5,18 @@
   "items": {
     "id": "/items",
     "properties": {
-      "addedAt": {
+      "added_at": {
         "default": null,
         "description": "An explanation about the purpose of this instance.",
-        "id": "/items/properties/addedAt",
-        "title": "The addedat schema",
+        "id": "/items/properties/added_at",
+        "title": "The added_at schema",
+        "type": "null"
+      },
+      "application_id": {
+        "default": null,
+        "description": "An explanation about the purpose of this instance.",
+        "id": "/items/properties/application_id",
+        "title": "The application_id schema",
         "type": "null"
       },
       "buckets_count": {
@@ -19,8 +26,15 @@
         "title": "The buckets_count schema",
         "type": "integer"
       },
+      "comments_count": {
+        "default": null,
+        "description": "An explanation about the purpose of this instance.",
+        "id": "/items/properties/comments_count",
+        "title": "The comments_count schema",
+        "type": "null"
+      },
       "created_at": {
-        "default": "2017-09-26T18:39:26.397Z",
+        "default": "2017-09-27T02:42:46.030Z",
         "description": "An explanation about the purpose of this instance.",
         "id": "/items/properties/created_at",
         "title": "The created_at schema",
@@ -36,11 +50,18 @@
       "images": {
         "id": "/items/properties/images",
         "properties": {
-          "addedAt": {
+          "added_at": {
             "default": null,
             "description": "An explanation about the purpose of this instance.",
-            "id": "/items/properties/images/properties/addedAt",
-            "title": "The addedat schema",
+            "id": "/items/properties/images/properties/added_at",
+            "title": "The added_at schema",
+            "type": "null"
+          },
+          "application_id": {
+            "default": null,
+            "description": "An explanation about the purpose of this instance.",
+            "id": "/items/properties/images/properties/application_id",
+            "title": "The application_id schema",
             "type": "null"
           },
           "hidpi": {
@@ -84,11 +105,18 @@
       "user": {
         "id": "/items/properties/user",
         "properties": {
-          "addedAt": {
+          "added_at": {
             "default": null,
             "description": "An explanation about the purpose of this instance.",
-            "id": "/items/properties/user/properties/addedAt",
-            "title": "The addedat schema",
+            "id": "/items/properties/user/properties/added_at",
+            "title": "The added_at schema",
+            "type": "null"
+          },
+          "application_id": {
+            "default": null,
+            "description": "An explanation about the purpose of this instance.",
+            "id": "/items/properties/user/properties/application_id",
+            "title": "The application_id schema",
             "type": "null"
           },
           "id": {

@@ -1,0 +1,52 @@
+<li id="screenshot-{{screenshot.id}}" class="group team">
+  <div class="dribbble">
+    <div class="dribbble-shot">
+      <div class="dribbble-img">
+          <picture>
+            <source
+              [srcset]="screenshot?.images.normal"
+              media="(-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx)">
+            <source
+              [srcset]="screenshot?.images.teaser">
+            <img alt="{{screenshot.title}}"
+                 [src]="screenshot?.images.teaser"/>
+          </picture>
+
+        <a class="dribbble-over"> <strong>{{screenshot.title}}</strong>
+          <em class="timestamp"></em>
+        </a>
+      </div>
+
+      <ul class="tools group">
+        <li class="fav">
+          <a title="View fans of this shot">{{screenshot.likes_count}}</a>
+        </li>
+        <li class="cmnt">
+          <span>{{screenshot.comments_count}}</span>
+        </li>
+        <li class="views">
+          <span>{{screenshot.views_count}}</span>
+        </li>
+        <li class="views">
+          <span>{{screenshot.buckets_count}}</span>
+        </li>
+      </ul>
+
+    </div>
+
+    <div class="extras">
+      <a><span rel="tipsy" title="This shot has rebounds." class="rebound-mark has-rebounds">0</span>
+      </a> <a href="/shots">
+        <span rel="tipsy" title="This shot is a rebound (reply) of another shot. View the original."
+              class="rebound-mark is-rebound">
+          <img width="16" height="16" alt="Rebound"
+               src="https://cdn.dribbble.com/assets/icon-rebound-2x-24fe8b574874f064bcab2a8e46e0694cc39641ebef3d176c2eb742f5f0c7c308.png"/>
+        </span>
+    </a> <span rel="tipsy" title="This shot has attachments" class="attachments-mark">
+        <img width="16" height="16" alt="Attachments"
+             src="https://cdn.dribbble.com/assets/icon-attach-16-2x-e9c3932a8f6aea66c54a2971b83349a8b6fac457fcaff1117cb13f74fe6766b4.png"/>
+      </span>
+    </div>
+
+  </div>
+</li>

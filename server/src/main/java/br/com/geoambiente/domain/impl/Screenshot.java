@@ -57,6 +57,10 @@ public class Screenshot extends AbstractEntity {
     @Column
     private Integer likesCount;
 
+    @JsonProperty("comments_count")
+    @Column
+    private Integer commentsCount;
+
     @JsonProperty("buckets_count")
     @Column
     private Integer bucketsCount;
