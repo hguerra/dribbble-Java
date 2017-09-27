@@ -1,3 +1,5 @@
-<ol *ngFor="let shot of screenshots | async" class="dribbbles group">
-  <db-screenshot [screenshot]="shot"></db-screenshot>
+<ol class="dribbbles group">
+  <db-screenshot *ngFor="let shot of screenshots | async"
+                 [screenshot]="shot">
+  </db-screenshot>
 </ol>
