@@ -165,4 +165,11 @@ public class ScreenshotControllerTest {
                 .contentType(contentType))
                 .andExpect(status().isOk());
     }
+
+    @Test
+    public void shouldRemoveScreenshotFromFavoritesById() throws Exception {
+        mockMvc.perform(delete("/favorites/1")
+                .contentType(contentType))
+                .andExpect(status().isOk());
+    }
 }
