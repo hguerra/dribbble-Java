@@ -6,11 +6,11 @@ A simple Dribbble API client.
 
 First of all you need to configure the API URL. Properties are located in `./client/src/app/app.api.ts` file.
 
-> By default application is using `'http://localhost:8080`.
+> By default application is using `http://localhost:8080`.
 
 ## Depelopment
 
-- `npm start` to start front-end server for development.
+- `ng serve` to start front-end server for development.
 - `mvn spring-boot:run` to start spring boot application on embedded server.
 
 > By default client server will be running on port `4200`.
