@@ -9,6 +9,8 @@ public interface ScreenshotService {
 
     void removeFromFavorites(Screenshot screenshot);
 
+    void removeFromFavorites(Long id);
+
     List<Screenshot> findFavorites();
 
     List<Screenshot> findFavoritesByDate();

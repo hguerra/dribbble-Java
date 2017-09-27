@@ -33,6 +33,12 @@ public class ScreenshotServiceImpl implements ScreenshotService {
     }
 
     @Override
+    public void removeFromFavorites(Long id) {
+        log.info("> Removing Screenshot '{}' from favorites.", id);
+        this.repository.delete(id);
+    }
+
+    @Override
     public List<Screenshot> findFavorites() {
         log.info("> Retrieving all Screenshots.");
         return this.repository.findAll();

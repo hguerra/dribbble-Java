@@ -2,6 +2,7 @@ import {Author} from './author.model';
 import {Image} from './image.model';
 
 export interface Screenshot {
+  application_id: number;
   id: number;
   title: string;
   user: Author;

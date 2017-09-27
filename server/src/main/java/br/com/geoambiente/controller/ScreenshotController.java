@@ -62,4 +62,11 @@ public class ScreenshotController {
         this.screenshotService.removeFromFavorites(screenshot);
         return new ResponseEntity(HttpStatus.OK);
     }
+
+    @RequestMapping(value = "/favorites/{id}", method = DELETE, produces = APPLICATION_JSON_VALUE, consumes = APPLICATION_JSON_VALUE)
+    @ResponseBody
+    public ResponseEntity removeFromFavorites(@PathVariable Long id) {
+        this.screenshotService.removeFromFavorites(id);
+        return new ResponseEntity(HttpStatus.OK);
+    }
 }

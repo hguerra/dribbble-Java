@@ -1,8 +1,8 @@
 import {Component, OnInit} from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
 import {Screenshot} from './screenshot/screenshot.model';
 import {ScreenshotService} from './screenshot.service';
-import {Observable} from 'rxjs/Observable';
+import {PaginationService} from './pagination.service';
+
 
 @Component({
   selector: 'db-screenshots',
@@ -10,14 +10,21 @@ import {Observable} from 'rxjs/Observable';
 })
 export class ScreenshotsComponent implements OnInit {
 
-  screenshots: Observable<Screenshot[]>;
+  screenshots: Screenshot[];
 
-  constructor(private screenshotService: ScreenshotService, private route: ActivatedRoute) {
+  constructor(private screenshotService: ScreenshotService, private paginationService: PaginationService) {
   }
 
   ngOnInit() {
-    // const page = this.route.parent.snapshot.params['page'];
-    const page = 1;
-    this.screenshots = this.screenshotService.popular(page);
+    const actual = this.paginationService.actual;
+    console.log('on init: ' + actual);
+    this.screenshotService.popular(actual).subscribe(shot => this.screenshots = shot);
+  }
+
+  next(): void {
+    this.paginationService.next();
+    const actual = this.paginationService.actual;
+    console.log('page: ' + actual);
+    this.screenshotService.popular(actual).subscribe(shot => this.screenshots = shot);
   }
 }

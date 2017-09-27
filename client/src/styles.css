@@ -1,1 +1,10 @@
-/* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+span.badge-add:hover {
+  background-color: green;
+}
+
+span.badge-remove:hover {
+  background-color: red;
+}
+

@@ -1,6 +1,43 @@
-<ol *ngFor="let shot of screenshots | async" class="dribbbles group">
+<ol *ngFor="let shot of screenshots" class="dribbbles group">
   <db-screenshot [screenshot]="shot"></db-screenshot>
 </ol>
+
+<div class="page">
+  <div class="pagination">
+    <span class="previous_page disabled">&larr; Prev</span>
+    <a class="next_page" rel="next" (click)="next()">Next&rarr;</a></div>
+</div>
+
+
+<!-- Modal -->
+<!--<ng-template #content let-c="close" let-d="dismiss">-->
+  <!--<div class="modal-header">-->
+    <!--<h4 class="modal-title">Propriedade da Imagem</h4>-->
+    <!--<button type="button" class="close" aria-label="Close" (click)="d('Cross click')">-->
+      <!--<span aria-hidden="true">&times;</span>-->
+    <!--</button>-->
+  <!--</div>-->
+  <!--<div class="modal-body">-->
+    <!--<div class="container-fluid">-->
+      <!--<div class="row">-->
+        <!--<img src="{{screenshot.images.normal}}" (click)="openHidpiImage()" alt="Card image cap" />-->
+      <!--</div>-->
+      <!--<div class="row">-->
+        <!--<button class="{{favoriteButtonClasses}}" (click)="favorite()">{{favoriteButtonDescription}}</button>-->
+      <!--</div>-->
+      <!--<div class="row">-->
+        <!--Autor: {{ screenshot.author.name }}-->
+      <!--</div>-->
+      <!--<div class="row">-->
+        <!--Data de publicação: {{ screenshot.publishDate | date: 'dd/MM/yyyy' }}-->
+      <!--</div>-->
+    <!--</div>-->
+  <!--</div>-->
+  <!--<div class="modal-footer">-->
+    <!--<button type="button" class="btn btn-secondary" (click)="c('Close click')">Close</button>-->
+  <!--</div>-->
+<!--</ng-template>-->
+
 
 <!--<ol class="dribbbles group">-->
 <!--<li id="screenshot-3826770" class="group team">-->

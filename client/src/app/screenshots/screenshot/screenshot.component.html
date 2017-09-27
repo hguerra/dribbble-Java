@@ -2,6 +2,7 @@
   <div class="dribbble">
     <div class="dribbble-shot">
       <div class="dribbble-img">
+        <a class="dribbble-link">
           <picture>
             <source
               [srcset]="screenshot?.images.normal"
@@ -11,6 +12,7 @@
             <img alt="{{screenshot.title}}"
                  [src]="screenshot?.images.teaser"/>
           </picture>
+        </a>
 
         <a class="dribbble-over"> <strong>{{screenshot.title}}</strong>
           <em class="timestamp"></em>
@@ -27,7 +29,7 @@
         <li class="views">
           <span>{{screenshot.views_count}}</span>
         </li>
-        <li class="views">
+        <li class="bucket">
           <span>{{screenshot.buckets_count}}</span>
         </li>
       </ul>
@@ -35,18 +37,18 @@
     </div>
 
     <div class="extras">
-      <a><span rel="tipsy" title="This shot has rebounds." class="rebound-mark has-rebounds">0</span>
-      </a> <a href="/shots">
-        <span rel="tipsy" title="This shot is a rebound (reply) of another shot. View the original."
-              class="rebound-mark is-rebound">
-          <img width="16" height="16" alt="Rebound"
-               src="https://cdn.dribbble.com/assets/icon-rebound-2x-24fe8b574874f064bcab2a8e46e0694cc39641ebef3d176c2eb742f5f0c7c308.png"/>
-        </span>
-    </a> <span rel="tipsy" title="This shot has attachments" class="attachments-mark">
-        <img width="16" height="16" alt="Attachments"
-             src="https://cdn.dribbble.com/assets/icon-attach-16-2x-e9c3932a8f6aea66c54a2971b83349a8b6fac457fcaff1117cb13f74fe6766b4.png"/>
+      <a><span rel="tipsy" title="This shot has rebounds." class="rebound-mark has-rebounds">0</span></a>
+      <a><span rel="tipsy" title="This shot is a rebound (reply) of another shot. View the original." class="rebound-mark is-rebound"><img width="16" height="16" alt="Rebound" src="https://cdn.dribbble.com/assets/icon-rebound-2x-24fe8b574874f064bcab2a8e46e0694cc39641ebef3d176c2eb742f5f0c7c308.png"/></span></a>
+      <span rel="tipsy" title="This shot has attachments" class="attachments-mark">
+        <img width="16" height="16" alt="Attachments" src="https://cdn.dribbble.com/assets/icon-attach-16-2x-e9c3932a8f6aea66c54a2971b83349a8b6fac457fcaff1117cb13f74fe6766b4.png"/>
       </span>
     </div>
-
   </div>
+
+  <h2 class="attribution hover-card-parent">
+    <span class="attribution-team">
+        <a (click)="add()" [routerLink]="['/date']" class="badge-link"><span class="badge badge-add">Add</span></a>
+        <a *ngIf="screenshot.application_id" (click)="remove()" [routerLink]="['/date']" class="badge-link"><span class="badge badge-remove">Remove</span></a>
+    </span>
+  </h2>
 </li>
