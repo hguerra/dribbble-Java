@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>
+    Dribbble - Show and tell for designers
+  </title>
+  <meta charset="utf-8"/>
+  <script type="text/javascript">
+    window.NREUM || (NREUM = {});
+    NREUM.info = {
+      "beacon": "bam.nr-data.net",
+      "errorBeacon": "bam.nr-data.net",
+      "licenseKey": "7840d0c136",
+      "applicationID": "2909452",
+      "transactionName": "Jg1bREUOClsARUpHABcHUF5ECQlDFhgMWgcAGg==",
+      "queueTime": 1,
+      "applicationTime": 53,
+      "agent": ""
+    }
+  </script>
+  <script type="text/javascript">
+    window.NREUM || (NREUM = {}), __nr_require = function (e, n, t) {
+      function r(t) {
+        if (!n[t]) {
+          var o = n[t] = {exports: {}};
+          e[t][0].call(o.exports, function (n) {
+            var o = e[t][1][n];
+            return r(o || n)
+          }, o, o.exports)
+        }
+        return n[t].exports
+      }
+
+      if ("function" == typeof __nr_require) return __nr_require;
+      for (var o = 0; o < t.length; o++) r(t[o]);
+      return r
+    }({
+      1: [function (e, n, t) {
+        function r() {
+        }
+
+        function o(e, n, t) {
+          return function () {
+            return i(e, [c.now()].concat(u(arguments)), n ? null : this, t), n ? void 0 : this
+          }
+        }
+
+        var i = e("handle"), a = e(2), u = e(3), f = e("ee").get("tracer"), c = e("loader"), s = NREUM;
+        "undefined" == typeof window.newrelic && (newrelic = s);
+        var p = ["setPageViewName", "setCustomAttribute", "setErrorHandler", "finished", "addToTrace", "inlineHit", "addRelease"],
+          d = "api-", l = d + "ixn-";
+        a(p, function (e, n) {
+          s[n] = o(d + n, !0, "api")
+        }), s.addPageAction = o(d + "addPageAction", !0), s.setCurrentRouteName = o(d + "routeName", !0), n.exports = newrelic, s.interaction = function () {
+          return (new r).get()
+        };
+        var m = r.prototype = {
+          createTracer: function (e, n) {
+            var t = {}, r = this, o = "function" == typeof n;
+            return i(l + "tracer", [c.now(), e, t], r), function () {
+              if (f.emit((o ? "" : "no-") + "fn-start", [c.now(), r, o], t), o) try {
+                return n.apply(this, arguments)
+              } finally {
+                f.emit("fn-end", [c.now()], t)
+              }
+            }
+          }
+        };
+        a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","), function (e, n) {
+          m[n] = o(l + n)
+        }), newrelic.noticeError = function (e) {
+          "string" == typeof e && (e = new Error(e)), i("err", [e, c.now()])
+        }
+      }, {}], 2: [function (e, n, t) {
+        function r(e, n) {
+          var t = [], r = "", i = 0;
+          for (r in e) o.call(e, r) && (t[i] = n(r, e[r]), i += 1);
+          return t
+        }
+
+        var o = Object.prototype.hasOwnProperty;
+        n.exports = r
+      }, {}], 3: [function (e, n, t) {
+        function r(e, n, t) {
+          n || (n = 0), "undefined" == typeof t && (t = e ? e.length : 0);
+          for (var r = -1, o = t - n || 0, i = Array(o < 0 ? 0 : o); ++r < o;) i[r] = e[n + r];
+          return i
+        }
+
+        n.exports = r
+      }, {}], 4: [function (e, n, t) {
+        n.exports = {exists: "undefined" != typeof window.performance && window.performance.timing && "undefined" != typeof window.performance.timing.navigationStart}
+      }, {}], ee: [function (e, n, t) {
+        function r() {
+        }
+
+        function o(e) {
+          function n(e) {
+            return e && e instanceof r ? e : e ? f(e, u, i) : i()
+          }
+
+          function t(t, r, o, i) {
+            if (!d.aborted || i) {
+              e && e(t, r, o);
+              for (var a = n(o), u = m(t), f = u.length, c = 0; c < f; c++) u[c].apply(a, r);
+              var p = s[y[t]];
+              return p && p.push([b, t, r, a]), a
+            }
+          }
+
+          function l(e, n) {
+            v[e] = m(e).concat(n)
+          }
+
+          function m(e) {
+            return v[e] || []
+          }
+
+          function w(e) {
+            return p[e] = p[e] || o(t)
+          }
+
+          function g(e, n) {
+            c(e, function (e, t) {
+              n = n || "feature", y[t] = n, n in s || (s[n] = [])
+            })
+          }
+
+          var v = {}, y = {}, b = {on: l, emit: t, get: w, listeners: m, context: n, buffer: g, abort: a, aborted: !1};
+          return b
+        }
+
+        function i() {
+          return new r
+        }
+
+        function a() {
+          (s.api || s.feature) && (d.aborted = !0, s = d.backlog = {})
+        }
+
+        var u = "nr@context", f = e("gos"), c = e(2), s = {}, p = {}, d = n.exports = o();
+        d.backlog = s
+      }, {}], gos: [function (e, n, t) {
+        function r(e, n, t) {
+          if (o.call(e, n)) return e[n];
+          var r = t();
+          if (Object.defineProperty && Object.keys) try {
+            return Object.defineProperty(e, n, {value: r, writable: !0, enumerable: !1}), r
+          } catch (i) {
+          }
+          return e[n] = r, r
+        }
+
+        var o = Object.prototype.hasOwnProperty;
+        n.exports = r
+      }, {}], handle: [function (e, n, t) {
+        function r(e, n, t, r) {
+          o.buffer([e], r), o.emit(e, n, t)
+        }
+
+        var o = e("ee").get("handle");
+        n.exports = r, r.ee = o
+      }, {}], id: [function (e, n, t) {
+        function r(e) {
+          var n = typeof e;
+          return !e || "object" !== n && "function" !== n ? -1 : e === window ? 0 : a(e, i, function () {
+            return o++
+          })
+        }
+
+        var o = 1, i = "nr@id", a = e("gos");
+        n.exports = r
+      }, {}], loader: [function (e, n, t) {
+        function r() {
+          if (!x++) {
+            var e = h.info = NREUM.info, n = d.getElementsByTagName("script")[0];
+            if (setTimeout(s.abort, 3e4), !(e && e.licenseKey && e.applicationID && n)) return s.abort();
+            c(y, function (n, t) {
+              e[n] || (e[n] = t)
+            }), f("mark", ["onload", a() + h.offset], null, "api");
+            var t = d.createElement("script");
+            t.src = "https://" + e.agent, n.parentNode.insertBefore(t, n)
+          }
+        }
+
+        function o() {
+          "complete" === d.readyState && i()
+        }
+
+        function i() {
+          f("mark", ["domContent", a() + h.offset], null, "api")
+        }
+
+        function a() {
+          return E.exists && performance.now ? Math.round(performance.now()) : (u = Math.max((new Date).getTime(), u)) - h.offset
+        }
+
+        var u = (new Date).getTime(), f = e("handle"), c = e(2), s = e("ee"), p = window, d = p.document,
+          l = "addEventListener", m = "attachEvent", w = p.XMLHttpRequest, g = w && w.prototype;
+        NREUM.o = {
+          ST: setTimeout,
+          SI: p.setImmediate,
+          CT: clearTimeout,
+          XHR: w,
+          REQ: p.Request,
+          EV: p.Event,
+          PR: p.Promise,
+          MO: p.MutationObserver
+        };
+        var v = "" + location, y = {
+            beacon: "bam.nr-data.net",
+            errorBeacon: "bam.nr-data.net",
+            agent: "js-agent.newrelic.com/nr-1044.min.js"
+          }, b = w && g && g[l] && !/CriOS/.test(navigator.userAgent),
+          h = n.exports = {offset: u, now: a, origin: v, features: {}, xhrWrappable: b};
+        e(1), d[l] ? (d[l]("DOMContentLoaded", i, !1), p[l]("load", r, !1)) : (d[m]("onreadystatechange", o), p[m]("onload", r)), f("mark", ["firstbyte", u], null, "api");
+        var x = 0, E = e(4)
+      }, {}]
+    }, {}, ["loader"]);
+  </script>
+  <meta name="theme-color" content="#333333">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0"/>
+  <meta name="referrer" content="origin-when-cross-origin">
+  <!--[if gte IE 7]><!-->
+  <link rel="stylesheet" media="screen, projection"
+        href="https://cdn.dribbble.com/assets/master-8598c7247338469ebac6fa28df9b6ceed61eb497fb677099a51324d330ab18ba.css"
+  />
+  <link rel="stylesheet" media="screen, projection"
+        href="https://cdn.dribbble.com/assets/infinite-076624da9ec905a875e10ad4be445c3511295c5baa04f72695f24fa97060d19e.css"
+  />
+  <link rel="stylesheet" media="screen, projection"
+        href="https://cdn.dribbble.com/assets/attachment-overlay-7a12596ba47e2a470ef6ea3482cd3de494d58e892359be13d57bab05b4f8efa8.css"
+  />
+  <!-- <![endif]-->
+  <link rel="stylesheet" media="print"
+        href="https://cdn.dribbble.com/assets/print-af897c350716ce875940317977d37c5289e6aa39cb324abab961d4b514bd61f2.css"
+  />
+  <link
+    href="https://cdn.dribbble.com/assets/dribbble-vector-ball-95ca193529993e9b3904f7adb541680aba196642f557cfaf3cdbb0a48a284be4.svg"
+    rel="mask-icon" color="#ea4c89"/>
+  <link
+    href="https://cdn.dribbble.com/assets/apple-touch-icon-precomposed-4a188d3f4dd693b67971fda843fd4bdeae751f9a245e3b878cae17e0a9d6a0a3.png"
+    rel="apple-touch-icon-precomposed"/>
+  <link
+    href="https://cdn.dribbble.com/assets/favicon-63b2904a073c89b52b19aa08cebc16a154bcf83fee8ecc6439968b1e6db569c7.ico"
+    rel="icon"/>
+  <link
+    href="https://cdn.dribbble.com/assets/dribbble-ball-192-ec064e49e6f63d9a5fa911518781bee0c90688d052a038f8876ef0824f65eaf2.png"
+    sizes="192x192" rel="icon"/>
+
+  <script>
+    if (location.hash.match(/^#\./) && window.history) {
+      window.history.replaceState({}, window.title, location.origin + location.pathname + location.search)
+    }
+  </script>
+  <noscript>
+    <style>
+      ol.dribbbles {
+        display: block !important
+      }
+    </style>
+  </noscript>
+</head>
+
+<body id="shots"
+      class="logged-out not-pro not-player not-self not-team not-on-team not-scout grid-small grid-with-meta">
+<div id="header" role="banner" class="group">
+  <div id="header-inner" class="group">
+
+    <div id="logo">
+      <a href="#"></a>
+    </div>
+    <ul id="nav" role="navigation"></ul>
+  </div>
+</div>
+<!-- /header -->
+
+<hr/>
+<div id="wrap">
+  <div class="full-tabs">
+    <ul class="shot-menu full-tabs-links">
+      <li class="more active"><a href="/shots">Popular</a>
+        <ul class="sub">
+          <li><a href="/shots?sort=views">Most Viewed</a></li>
+        </ul>
+      </li>
+      <li class="more active"><a href="/shots">Favorites</a>
+        <ul class="sub">
+          <li><a href="/shots?sort=recent">Recent</a></li>
+          <li><a href="/shots?sort=recent">Date</a></li>
+        </ul>
+      </li>
+    </ul>
+
+    <div id="wrap-inner">
+      <div id="content" role="main">
+        <div class="notice-alert">
+          <h3>
+            <!-- message goes here -->
+          </h3>
+          <a href="#" class="close" aria-label="close">
+            <img width="25" alt="close"
+                 src="https://cdn.dribbble.com/assets/icon-shot-x-light-2x-a4fcd61bdb114023583740bd9f5a46734e243e5be2bff1baa3e1cc33e7877fcd.png"/>
+          </a>
+        </div>
+
+        <div id="main" class="main-full">
+
+
+          <ol class="dribbbles group">
+            <li id="screenshot-3826770" class="group team">
+              <div class="dribbble">
+                <div class="dribbble-shot">
+                  <div class="dribbble-img">
+                    <a class="dribbble-link" href="/shots/3826770-Missing-Summer">
+                      <picture>
+                        <source
+                          srcset="https://cdn.dribbble.com/users/1461762/screenshots/3826770/missing_summer_1x.png"
+                          media="(-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx)">
+                        <source
+                          srcset="https://cdn.dribbble.com/users/1461762/screenshots/3826770/missing_summer_teaser.png">
+                        <img alt="Missing Summer"
+                             src="https://cdn.dribbble.com/users/1461762/screenshots/3826770/missing_summer_teaser.png"/>
+                      </picture>
+                    </a>
+                    <a class="dribbble-over" href="/shots/3826770-Missing-Summer"> <strong>Missing Summer</strong>
+                      <span class="comment">Cosy evenings giving the time to relax and think the day over are a good part of happiness, aren't they?
+
+Today let me add such a mood to your ear...</span>
+                      <em class="timestamp"></em>
+                    </a></div>
+
+                  <ul class="tools group">
+                    <li class="fav">
+                      <a title="View fans of this shot" href="/shots/3826770-Missing-Summer/fans">695</a>
+                    </li>
+                    <li class="cmnt">
+                        <span>
+      34
+    </span>
+                    </li>
+                    <li class="views">
+                      <span>4,419</span>
+                    </li>
+                  </ul>
+
+                </div>
+
+                <div class="extras">
+                  <a href="/shots/3826770-Missing-Summer/rebounds">
+        <span rel="tipsy" title="This shot has rebounds." class="rebound-mark has-rebounds">
+          0
+        </span>
+                  </a> <a href="/shots">
+        <span rel="tipsy" title="This shot is a rebound (reply) of another shot. View the original."
+              class="rebound-mark is-rebound">
+          <img width="16" height="16" alt="Rebound"
+               src="https://cdn.dribbble.com/assets/icon-rebound-2x-24fe8b574874f064bcab2a8e46e0694cc39641ebef3d176c2eb742f5f0c7c308.png"/>
+        </span>
+                </a> <span rel="tipsy" title="This shot has attachments" class="attachments-mark">
+        <img width="16" height="16" alt="Attachments"
+             src="https://cdn.dribbble.com/assets/icon-attach-16-2x-e9c3932a8f6aea66c54a2971b83349a8b6fac457fcaff1117cb13f74fe6766b4.png"/>
+      </span>
+                </div>
+
+              </div>
+
+              <h2 class="attribution hover-card-parent">
+                  <span class="attribution-team">
+        <a class="url hoverable" rel="contact" href="/norde"><img class="photo"
+                                                                  src="https://cdn.dribbble.com/users/135634/avatars/mini/2278a1c672a9ed37f91ee6df158ec94e.png?1500409122"/> Norde</a>
+        <a class="badge-link" href="/teams/info">
+  <span class="badge badge-team">Team</span>
+                  </a>
+                  </span>
+                <span class="attribution-user">
+      <a class="url hoverable" rel="contact" href="/lanamarandina"><img class="photo"
+                                                                        src="https://cdn.dribbble.com/users/1461762/avatars/mini/815e66264d63f650041665fb13f26cfb.jpg?1479395455"/> Lana Marandina</a>
+
+    </span>
+              </h2>
+            </li>
+          </ol>
+          <div class="page">
+            <div class="pagination"><span class="previous_page disabled">&larr; Prev</span> <a class="next_page"
+                                                                                               rel="next"
+                                                                                               href="/shots?page=2">Next
+              &rarr;</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="footer" role="contentinfo">
+    <div id="footer-inner">
+      <div class="group">
+        <div class="footer-mod">
+          <p class="logo"><a href="/"><img width="80" alt="dribbble"
+                                           src="https://cdn.dribbble.com/assets/logo-footer-hd-a05db77841b4b27c0bf23ec1378e97c988190dfe7d26e32e1faea7269f9e001b.png"/></a><br
+          />Show and tell for designers</p>
+          <p class="about">What are you working on? Dribbble is a community of designers sharing screenshots of their
+            work, process, and
+            projects.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="assets/js/jquery.min.js"></script>
+  <!-- jquery failover -->
+  <script>
+    if (typeof jQuery == 'undefined') {
+      document.write(unescape('%3Cscript src="https://cdn.dribbble.com/assets/jquery-1.8.3.min-558de951bfc970b180d330ead5cef872e30b97b38afe65d7af04dadeeec534f8.js">%3C/script>'))
+    }
+  </script>
+
+  <script
+    src="https://cdn.dribbble.com/assets/global-e90501933571d810e08383ddf8c71f172a0379abf8073ff263cf0fafdfb35986.js"></script>
+  <script
+    src="https://cdn.dribbble.com/assets/shots-manifest-c2b5b9065fc75320ec6a4eb41c74587b3c0786f696152fceb6d925f42eb4099e.js"></script>
+</div>
+</body>
+
+</html>
